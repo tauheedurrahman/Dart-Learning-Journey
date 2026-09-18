@@ -12,12 +12,14 @@ This repository tracks my journey learning Dart, covering everything from basic 
 - [x] Variables & Data Types (`var`, `final`, `const`)
 - [x] Operators (arithmetic, comparison, logical, null-aware)
 - [x] Control Flow (`if-else`, `for`, `while`)
+- [x] Switch Statements
 
 ### Phase 2: Functions & OOP
 - [x] Functions (named parameters, optional parameters, arrow functions)
-- [ ] Classes & Objects
-- [ ] Constructors (default, named, factory)
-- [ ] Inheritance, Polymorphism, Encapsulation
+- [x] Classes & Objects
+- [x] Constructors (`this.` shorthand syntax)
+- [x] Getters
+- [ ] Inheritance, Polymorphism, Encapsulation (in progress)
 - [ ] Mixins & Interfaces
 - [ ] Enums
 
@@ -108,6 +110,82 @@ void main() {
   print(calculateArea(4.0, 8.0));           // 32.0
   print(isEven(5));                          // false
   print(greetPerson(name: "Tauheed", age: 23)); // Hello Tauheed, you are 23 years old
+}
+```
+
+### Switch Statement
+```dart
+void main() {
+  int dayNumber = 7;
+
+  switch (dayNumber) {
+    case 1:
+      print("Today Is Monday");
+      break;
+    case 2:
+      print("Today is Tuesday");
+      break;
+    case 3:
+      print("Today is Wednesday");
+      break;
+    case 4:
+      print("Today is Thursday");
+      break;
+    case 5:
+      print("Today is Friday");
+      break;
+    case 6:
+      print("Today is Saturday");
+      break;
+    case 7:
+      print("Today is Sunday");
+      break;
+    default:
+      print("Invalid day number");
+  }
+}
+```
+
+### Classes & Objects (OOP)
+```dart
+class Student {
+  String name;
+  int rollNumber;
+  double gpa;
+
+  // Constructor (shorthand syntax)
+  Student(this.name, this.rollNumber, this.gpa);
+
+  // Method
+  void showDetails() {
+    print("Student Name is $name, RollNumber is $rollNumber, Student GPA is $gpa");
+  }
+
+  // Getter - behaves like a property, computes a value
+  String get grade {
+    if (gpa >= 3.5) return "A Grade";
+    if (gpa >= 3.0) return "B Grade";
+    if (gpa >= 2.5) return "C Grade";
+    return "Fail";
+  }
+
+  // Regular method returning bool
+  bool isPassing() {
+    return gpa >= 2.0;
+  }
+}
+
+void main() {
+  Student s1 = Student("Tauheed", 61, 2.7);
+  Student s2 = Student("Sameer", 52, 2.0);
+
+  s1.showDetails();
+  print("Grade: ${s1.grade}");
+  print("Passing: ${s1.isPassing()}");
+
+  s2.showDetails();
+  print("Grade: ${s2.grade}");
+  print("Passing: ${s2.isPassing()}");
 }
 ```
 
