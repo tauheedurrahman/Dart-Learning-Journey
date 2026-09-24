@@ -60,7 +60,8 @@ void main() {
       print(i);
     }
   }
-  int a = 10, b = 3;
+  int a = 10,
+      b = 3;
   print(a + b);
   print(a - b);
   print(a * b);
@@ -88,34 +89,34 @@ void main() {
   * */
 
 
-  int x , y , z, q;
+  int x, y, z, q;
   x = 5;
   y = 10;
   z = 15;
   q = 56;
 
-  bool andOperator = x<y && z<q;
+  bool andOperator = x < y && z < q;
   print("and result is $andOperator");
 
-  bool orOperator = x>y || z<q;
+  bool orOperator = x > y || z < q;
   print("or result is $orOperator");
 
-  bool notOperator = !(x>y);
+  bool notOperator = !(x > y);
   print("not result is $notOperator");
 
-  x>y && z<q;
-print("and result is $andOperator");
+  x > y && z < q;
+  print("and result is $andOperator");
 
-print("-----------------------------------------------OOP");
+  print("-----------------------------------------------OOP");
   Student s1 = Student("Tauheed", 61, 2.7);
-  Student s2 = Student("Sameer", 52,  2.0);
+  Student s2 = Student("Sameer", 52, 2.0);
   s1.showDetails();
   print("Grade: ${s1.grade}");
   print("Passing: ${s1.isPassing()}");
   s2.showDetails();
   print("Grade: ${s2.grade}");
   print("Passing: ${s2.isPassing()}");
-print("___________________________________________________");
+  print("___________________________________________________");
   /*
   conditional statements
   if statement
@@ -130,46 +131,46 @@ print("___________________________________________________");
 
   int age = 18;
   bool cnic = false;
-  if(age>=18 && cnic == true){
+  if (age >= 18 && cnic == true) {
     print("you can vote");
   }
 
   String password = '1234567';
-  if(password=='123456'){
+  if (password == '123456') {
     print("login");
   }
 
   // if else example
 
-  if(age<=17){
+  if (age <= 17) {
     print("you can vote");
-  }else{
+  } else {
     print("you cannot vote");
   }
 
   // find vowel a , e , i , o , u
   String v = 'a';
-  if(v=='a' || v=='e' || v=='i' || v=='o'|| v=='u' ){
+  if (v == 'a' || v == 'e' || v == 'i' || v == 'o' || v == 'u') {
     print("vowel $v");
-  }else{
+  } else {
     print("not vowel $v");
   }
 
 
   // even odd example
   int n = 4;
-  if(n%2==0){
+  if (n % 2 == 0) {
     print("number is even $n");
-  }else{
+  } else {
     print("number is odd $n");
   }
 
   int hight = 6;
   bool Armyofficer = true;
-  if(hight >= 6 && Armyofficer == true){
+  if (hight >= 6 && Armyofficer == true) {
     print("You are alligable for the army officer");
   }
-  else{
+  else {
     print("You are not alligiable for the army officer ");
   }
 
@@ -197,7 +198,7 @@ print("___________________________________________________");
     }
   }
   String Day = "Sunday";
-  switch (Day){
+  switch (Day) {
     case "Monday":
       print("To Day is Monday");
     case "Tuesday":
@@ -210,10 +211,9 @@ print("___________________________________________________");
       print("To Day is Sunay");
     default:
       print("Invalid Day");
-
   }
   int dayNumber = 7;
-  switch (dayNumber){
+  switch (dayNumber) {
     case 1:
       print("Today Is Monday");
       break;
@@ -238,7 +238,5 @@ print("___________________________________________________");
     default:
       print("invalid day number");
   }
-
-
 
 }

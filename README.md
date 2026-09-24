@@ -13,6 +13,7 @@ This repository tracks my journey learning Dart, covering everything from basic 
 - [x] Operators (arithmetic, comparison, logical, null-aware)
 - [x] Control Flow (`if-else`, `for`, `while`)
 - [x] Switch Statements
+- [x] Nested Loops (Shape Patterns)
 
 ### Phase 2: Functions & OOP
 - [x] Functions (named parameters, optional parameters, arrow functions)
@@ -24,7 +25,8 @@ This repository tracks my journey learning Dart, covering everything from basic 
 - [ ] Enums
 
 ### Phase 3: Advanced Concepts
-- [ ] Collections (List, Map, Set — deep dive)
+- [x] Collections — Lists (add, addAll, remove, removeAt, insert, length)
+- [ ] Collections — Map, Set (deep dive)
 - [ ] Generics
 - [ ] Async Programming (`Future`, `async`/`await`, `Stream`)
 - [ ] Error Handling
@@ -41,6 +43,25 @@ This repository tracks my journey learning Dart, covering everything from basic 
 - [ ] File Handling Utility
 - [ ] REST API Consumer
 - [ ] Algorithm Challenges
+
+## 📝 Current Assignment (In Progress)
+
+- [x] Square shape with `*`
+- [x] Rectangle shape with `*`
+- [x] Triangle shape with `*`
+- [ ] Pentagon shape with `*`
+- [ ] Circle shape with `*`
+- [ ] Print family names in ascending order
+- [ ] Add two integers, store sum in a third variable
+- [ ] Add two integers
+- [ ] Multiply two double numbers
+- [ ] Perform all arithmetic operations
+- [ ] Convert feet to metres, metres to KM
+- [ ] Convert Celsius to Fahrenheit
+- [ ] Convert Fahrenheit to Celsius
+- [ ] Calculate area of a circle
+- [ ] Calculate area of a square
+- [ ] Calculate area of a rectangle
 
 ## 💻 Code Examples
 
@@ -107,9 +128,9 @@ String greetPerson({required String name, int age = 0}) {
 }
 
 void main() {
-  print(calculateArea(4.0, 8.0));           // 32.0
-  print(isEven(5));                          // false
-  print(greetPerson(name: "Tauheed", age: 23)); // Hello Tauheed, you are 23 years old
+  print(calculateArea(4.0, 8.0));                // 32.0
+  print(isEven(5));                               // false
+  print(greetPerson(name: "Tauheed", age: 23));   // Hello Tauheed, you are 23 years old
 }
 ```
 
@@ -186,6 +207,98 @@ void main() {
   s2.showDetails();
   print("Grade: ${s2.grade}");
   print("Passing: ${s2.isPassing()}");
+}
+```
+
+### Nested Loops — Shape Patterns
+```dart
+void square() {
+  int size = 5;
+  for (int i = 0; i < size; i++) {
+    String row = "";
+    for (int j = 0; j < size; j++) {
+      row += "* ";
+    }
+    print(row);
+  }
+}
+
+void rectangle() {
+  int rows = 4;
+  int cols = 8;
+  for (int i = 0; i < rows; i++) {
+    String row = "";
+    for (int j = 0; j < cols; j++) {
+      row += "* ";
+    }
+    print(row);
+  }
+}
+
+void triangle() {
+  int rows = 5;
+  for (int i = 1; i <= rows; i++) {
+    String row = "";
+    for (int j = 1; j <= i; j++) {
+      row += "* ";
+    }
+    print(row);
+  }
+}
+
+void main() {
+  print("Square:");
+  square();
+
+  print("\nRectangle:");
+  rectangle();
+
+  print("\nTriangle:");
+  triangle();
+}
+```
+
+### Lists (Collections)
+```dart
+void main() {
+  List<String> students = ["Ali", "Tauheed", "Sameer"];
+  print(students[0]);
+  print(students[1]);
+  print(students[2]);
+  print(students);
+
+  // Adding to the list
+  students.add("Mansoor");
+  print(students);
+
+  // Adding multiple items to the list
+  students.addAll(["Zulqarnain", "Zeeshan Alam"]);
+  print(students);
+
+  // Removing by value
+  students.remove("Mansoor");
+
+  // Removing by index
+  students.removeAt(1);
+
+  // Inserting a value at a specific index
+  students.insert(1, "Shakeel");
+  print(students);
+
+  // Length of the list
+  print(students.length);
+
+  // for-in loop
+  for (var s in students) {
+    print(s);
+  }
+
+  // while loop using index
+  int k = 0;
+  while (k < students.length) {
+    print(students[k]);
+    k++;
+  }
 }
 ```
 
